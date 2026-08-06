@@ -1,0 +1,264 @@
+{
+  "kioskInfo": {
+    "title": "Madam Bhikaji Cama Digital Museum Kiosk",
+    "subtitle": "Mother of the Indian Revolution (1861–1936)",
+    "event": "Freedom Fest 2026",
+    "themeColor": {
+      "saffron": "#FF9933",
+      "emerald": "#138808",
+      "navy": "#000080",
+      "parchment": "#FDFBF7"
+    }
+  },
+  "globalNodes": [
+    {
+      "id": "bombay",
+      "name": "Bombay (Mumbai)",
+      "country": "India",
+      "lat": 18.9634,
+      "lng": 72.8223,
+      "era": "1861 – 1902 • 1935 – 1936",
+      "summary": "Born into a wealthy Parsi Zoroastrian family (Sorabji Framji Patel & Jaijibai), educated at Alexandra Girls' English Institution, volunteered during the 1896 plague, and returned to die in her homeland in 1936.",
+      "hasSubMap": true,
+      "subMapTitle": "Bombay Regional Historic Sites",
+      "subNodes": [
+        {
+          "id": "alexandra_school",
+          "name": "Alexandra Girls' English Institution",
+          "year": "1861 - 1878",
+          "type": "Education & Early Life",
+          "lat": 18.9325,
+          "lng": 72.8335,
+          "shortDesc": "Attended the famous Alexandra Girls' English Institution where Bhikaji Patel excelled in languages, history, and social leadership.",
+          "fullWriteup": "Born Bhikaiji Sorab Patel on September 24, 1861, into an affluent and influential Parsi Zoroastrian family. Her father, Sorabji Framji Patel, was a prominent merchant and Parsi community leader. Bhikaji received a modern, disciplined education at the Alexandra Girls' English Institution in Fort, Bombay, quickly demonstrating a sharp flair for languages, public debate, and social reform.",
+          "quote": "Education is not merely for refined living, but an armor to serve one's country and uplift the downtrodden.",
+          "narrationText": "Born on September 24, 1861 to a prominent Parsi family, Bhikaji Patel studied at the Alexandra Girls' English Institution in Bombay. Recognized for her extraordinary intellect and love for Indian heritage, she developed a lifelong passion for social activism.",
+          "animationType": "school_pupil"
+        },
+        {
+          "id": "fort_reform",
+          "name": "Fort District & Rustom Cama Estate",
+          "year": "1885",
+          "type": "Marriage & Social Activism",
+          "lat": 18.9350,
+          "lng": 72.8350,
+          "shortDesc": "Married wealthy lawyer Rustomji Cama and engaged in extensive civic & women's welfare reform.",
+          "fullWriteup": "In August 1885, Bhikaji married Rustomji Cama, a wealthy pro-British lawyer. Despite marital incompatibility arising from her strong anti-colonial stance, Madam Cama devoted her personal fortune and energies to social work, advocating for women's rights, healthcare, and education across Bombay.",
+          "quote": "My marriage is to my conscience and my motherland first.",
+          "narrationText": "In 1885, Bhikaji married lawyer Rustomji Cama. While her husband was pro-British, Madam Cama dedicated herself to philanthropic causes, women's welfare, and social reform across Bombay.",
+          "animationType": "london_parliament"
+        },
+        {
+          "id": "grant_medical",
+          "name": "Grant Medical College Hospital",
+          "year": "1896",
+          "type": "Plague Relief & Heroic Nursing",
+          "lat": 18.9620,
+          "lng": 72.8310,
+          "shortDesc": "Selflessly volunteered in epidemic wards during the devastating 1896 Bubonic Plague.",
+          "fullWriteup": "When a catastrophic Bubonic Plague pandemic struck Bombay in 1896, Madam Cama courageously joined relief teams at Grant Medical College Hospital, nursing sick and dying plague victims directly. She eventually contracted the fatal disease herself; although she survived, her health was severely impaired, leading doctors to advise travel to Europe in 1902 for specialized medical treatment.",
+          "quote": "When our brothers and sisters perish in agony, how can any true child of India stand idle?",
+          "narrationText": "During the 1896 Bombay bubonic plague outbreak, Madam Cama personally nursed victims at Grant Medical College. Contracting the disease herself, she barely survived and traveled to Europe in 1902 to recover.",
+          "animationType": "plague_ward"
+        },
+        {
+          "id": "bombay_port",
+          "name": "Bombay Port (Apollo Bunder)",
+          "year": "1902",
+          "type": "Departure for Exile",
+          "lat": 18.9220,
+          "lng": 72.8340,
+          "shortDesc": "Departed India aboard SS Arabia for London; beginning 33 years of exile.",
+          "fullWriteup": "In 1902, Madam Cama departed Bombay Port for medical care in Europe. British colonial authorities later barred her from returning unless she agreed to sign a pledge abstaining from nationalist activities—a pledge she steadfastly refused to sign, commencing 33 years of exile.",
+          "quote": "I shall return to my sacred motherland only with honor, or die fighting for her liberty!",
+          "narrationText": "In 1902, Madam Cama sailed out of Bombay Port for Europe. Refusing British demands to abandon her political activities, her medical stay transformed into 33 years of exile.",
+          "animationType": "ship_departure"
+        },
+        {
+          "id": "parsi_hospital_return",
+          "name": "Parsi General Hospital (Cumballa Hill)",
+          "year": "1935 - 1936",
+          "type": "Return from Exile & Passing",
+          "lat": 18.9680,
+          "lng": 72.8060,
+          "shortDesc": "Returned home in 1935 after 33 years of exile, passing away at Parsi General Hospital on August 13, 1936.",
+          "fullWriteup": "Aged, frail, and partially paralyzed after decades of international struggle, Madam Cama was finally permitted to return to India in 1935. Accompanied by Sir Cowasji Jehangir, she was admitted to Sir Hurkisondas Hospital and later Parsi General Hospital in Bombay. On August 13, 1936, at age 74, she passed away, bequeathing most of her personal estate to charities and orphanages.",
+          "quote": "My eyes have seen the dawn of freedom. India shall be free!",
+          "narrationText": "In 1935, an ailing Madam Cama returned to Bombay after thirty-three years in exile. She passed away peacefully at Parsi General Hospital on August 13, 1936, leaving her fortune to charity.",
+          "animationType": "school_pupil"
+        }
+      ]
+    },
+    {
+      "id": "london",
+      "name": "London",
+      "country": "United Kingdom",
+      "lat": 51.5074,
+      "lng": -0.1278,
+      "era": "1902 – 1908",
+      "summary": "Secretary to Dadabhai Naoroji, co-founder of the Indian Home Rule Society, and mentor at India House.",
+      "hasSubMap": false,
+      "fullWriteup": "In London, Madam Cama served as private secretary to Dadabhai Naoroji, assisting his historic campaign for the British Parliament. In 1905, alongside Shyamji Krishna Varma and S.R. Rana, she helped establish the Indian Home Rule Society and India House in Highgate, London, creating a vibrant hub for Indian nationalist students and revolutionaries like Vinayak Damodar Savarkar.",
+      "quote": "Freedom is our birthright, and no foreign empire can hold a quarter of humanity in perpetual bondage.",
+      "narrationText": "In London, Madam Cama worked alongside Dadabhai Naoroji and helped found the Indian Home Rule Society at India House, mentoring young revolutionaries including Veer Savarkar.",
+      "animationType": "london_parliament"
+    },
+    {
+      "id": "stuttgart",
+      "name": "Stuttgart",
+      "country": "Germany",
+      "lat": 48.7758,
+      "lng": 9.1829,
+      "era": "August 22, 1907",
+      "summary": "Historic unfurling of the first version of the Indian National Flag at the International Socialist Conference.",
+      "hasSubMap": false,
+      "fullWriteup": "On August 22, 1907, Madam Cama made history at the International Socialist Conference in Stuttgart, Germany. Before over 1,000 international delegates, she delivered a powerful address condemning British colonial rule, famine, and economic exploitation in India. She then unfurled the 'Vande Mataram Flag'—a tricolor banner of green, saffron (yellow), and red—declaring it the flag of Indian Independence.",
+      "quote": "Behold, the flag of Indian Independence! It is born, it is consecrated by the blood of Indian youth. I call upon all lovers of freedom around the world to stand up and salute this flag!",
+      "narrationText": "On August 22, 1907 in Stuttgart, Germany, Madam Bhikaji Cama unfurled the first version of India's National Flag before over one thousand delegates at the International Socialist Conference.",
+      "animationType": "flag_unfurling"
+    },
+    {
+      "id": "paris",
+      "name": "Paris",
+      "country": "France",
+      "lat": 48.8566,
+      "lng": 2.3522,
+      "era": "1909 – 1914",
+      "summary": "Headquarters of Paris Indian Society, editing 'Bande Mataram', and covert grandfather clock smuggling.",
+      "hasSubMap": false,
+      "fullWriteup": "Moving to Paris in 1909 to avoid arrest in England, Madam Cama helped establish the Paris Indian Society. She edited and published the revolutionary journals 'Bande Mataram' and 'Madan's Talwar'. To bypass British customs blockades, she smuggled banned literature and Browning pistols into India hidden inside hollowed grandfather clock cases shipped via Pondicherry.",
+      "quote": "Ideas cannot be jailed by iron bars nor checked by custom officers. Truth will break all blockades!",
+      "narrationText": "From Paris, Madam Cama published the revolutionary journal Bande Mataram and smuggled literature and arms inside grandfather clocks sent to Pondicherry.",
+      "animationType": "clock_smuggling"
+    },
+    {
+      "id": "marseille",
+      "name": "Marseille",
+      "country": "France",
+      "lat": 43.2965,
+      "lng": 5.3698,
+      "era": "July 1910",
+      "summary": "Mobilized international law and public protests for Veer Savarkar's escape at Marseille port.",
+      "hasSubMap": false,
+      "fullWriteup": "When revolutionary leader Vinayak Damodar Savarkar escaped from the British transport ship SS Morea at Marseille port in July 1910, French police illegally handed him back to the British. Madam Cama rushed to Marseille, rallying French socialists and international jurists to demand political asylum for Savarkar, bringing the case to the Permanent Court of Arbitration at The Hague.",
+      "quote": "Assassination of political asylum rights on neutral soil is a crime against humanity. France must defend her sovereignty and law of sanctuary!",
+      "narrationText": "When Veer Savarkar escaped at Marseille harbor, Madam Cama led an international movement fighting for his political asylum under international law.",
+      "animationType": "marseille_rescue"
+    },
+    {
+      "id": "geneva",
+      "name": "Geneva & Zurich",
+      "country": "Switzerland",
+      "lat": 46.2044,
+      "lng": 6.1432,
+      "era": "1914 – 1915",
+      "summary": "Neutral European press headquarters, anti-colonial propaganda, and weapon supply lines across Swiss borders.",
+      "hasSubMap": false,
+      "fullWriteup": "With the onset of World War I in 1914, Madam Cama maintained neutral revolutionary networks in Geneva and Zurich, publishing anti-colonial literature and liaising with Ghadar Party revolutionaries in Berlin and America.",
+      "quote": "War between imperial powers is not our war. Our struggle is sole and absolute: freedom for India!",
+      "narrationText": "During World War I, Madam Cama operated out of neutral Switzerland, coordinating global support for Indian independence.",
+      "animationType": "london_parliament"
+    },
+    {
+      "id": "vichy",
+      "name": "Vichy & Bordeaux",
+      "country": "France",
+      "lat": 46.1264,
+      "lng": 3.4258,
+      "era": "1914 – 1919",
+      "summary": "World War I police surveillance & forced internment under British diplomatic pressure.",
+      "hasSubMap": false,
+      "fullWriteup": "Under British diplomatic pressure during World War I, French authorities placed Madam Cama under house arrest and internment in Vichy and Bordeaux. Despite failing health and strict police surveillance, she refused to retract her nationalist stance.",
+      "quote": "You may confine my body to Vichy, but my mind lives free in the heart of every Indian patriot!",
+      "narrationText": "During WWI, Madam Cama was placed under house arrest in Vichy. Despite ill health and surveillance, she steadfastly stood by her revolutionary principles.",
+      "animationType": "plague_ward"
+    }
+  ],
+  "flagInfo": {
+    "title": "The Historic 1907 Vande Mataram Flag",
+    "designedBy": "Bhikaiji Cama, Vinayak Damodar Savarkar & Shyamji Krishna Varma",
+    "unfurledLocation": "Stuttgart, Germany (August 22, 1907)",
+    "stripes": [
+      {
+        "color": "Green",
+        "hex": "#008000",
+        "symbol": "8 Blooming Lotuses",
+        "meaning": "Represented the eight administrative provinces of British India united in freedom."
+      },
+      {
+        "color": "Saffron / Yellow",
+        "hex": "#FF9933",
+        "symbol": "Devanagari Inscription 'वन्दे मातरम्'",
+        "meaning": "The sacred anthem 'Vande Mataram' (I bow to thee, Motherland), inscribed across the central band."
+      },
+      {
+        "color": "Red",
+        "hex": "#D32F2F",
+        "symbol": "Sun (Left) & Crescent Moon with Star (Right)",
+        "meaning": "The Sun and Crescent Moon represented Hindu and Muslim unity across the nation."
+      }
+    ]
+  },
+  "quizQuestions": [
+    {
+      "id": 1,
+      "question": "What legendary title was Madam Bhikaji Cama affectionately given for her historic revolutionary work?",
+      "options": [
+        "Mother of the Indian Revolution",
+        "Nightingale of Freedom",
+        "Grand Old Lady of Independence",
+        "Iron Lady of Bombay"
+      ],
+      "correctIndex": 0,
+      "explanation": "Madam Bhikaji Cama was revered across India and Europe as the 'Mother of the Indian Revolution' for her pioneering work, flag unfurling, and lifelong devotion to India's freedom."
+    },
+    {
+      "id": 2,
+      "question": "In which German city did Madam Cama unfurl the first version of the Indian National Flag on August 22, 1907?",
+      "options": [
+        "Berlin",
+        "Stuttgart",
+        "Munich",
+        "Frankfurt"
+      ],
+      "correctIndex": 1,
+      "explanation": "She unfurled the historic 'Vande Mataram' tricolor flag at the 7th International Socialist Conference in Stuttgart, Germany, before over 1,000 delegates."
+    },
+    {
+      "id": 3,
+      "question": "What did the eight lotuses across the top green stripe of her 1907 flag represent?",
+      "options": [
+        "The 8 main rivers of India",
+        "The 8 provinces of British India",
+        "The 8 principles of Socialism",
+        "The 8 stages of independence"
+      ],
+      "correctIndex": 1,
+      "explanation": "Each lotus represented one of the eight administrative provinces of British India at the time, signifying national unity across all territories."
+    },
+    {
+      "id": 4,
+      "question": "How did Madam Cama smuggle banned revolutionary literature and pistols into British India from Paris?",
+      "options": [
+        "Inside hollowed-out Grandfather Clock cases shipped via Pondicherry",
+        "Disguised as sacred religious scriptures",
+        "Hidden in tea crates sent from London",
+        "Via secret diplomat pouches from Berlin"
+      ],
+      "correctIndex": 0,
+      "explanation": "Madam Cama hid copies of 'Bande Mataram' and Browning automatic handguns inside double-bottomed grandfather clock cases sent to the French enclave of Pondicherry."
+    },
+    {
+      "id": 5,
+      "question": "Which historic Indian leader did Madam Cama serve as private secretary for during her early activism in London?",
+      "options": [
+        "Lala Lajpat Rai",
+        "Dadabhai Naoroji",
+        "Gopal Krishna Gokhale",
+        "Bal Gangadhar Tilak"
+      ],
+      "correctIndex": 1,
+      "explanation": "She served as private secretary to Dadabhai Naoroji, supporting his election campaign to become the first Indian Member of the British House of Commons in 1892-1895."
+    }
+  ]
+}
