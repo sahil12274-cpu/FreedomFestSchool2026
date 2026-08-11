@@ -36,7 +36,7 @@ export default function Header({ activeTab, setActiveTab, onStartAttractMode }) 
   ];
 
   return (
-    <header className="sticky top-0 z-40 bg-[#FDFBF7]/95 backdrop-blur-md border-b border-[#FF9933]/30 shadow-sm">
+    <header className="sticky top-0 z-50 bg-[#FDFBF7]/95 backdrop-blur-md border-b border-[#FF9933]/30 shadow-sm">
       {/* Tricolor Accent Stripe */}
       <div className="h-1.5 w-full grid grid-cols-3">
         <div className="bg-[#FF9933]"></div>

@@ -81,6 +81,7 @@
   background-color: #FDFBF7 !important;
   font-family: 'Inter', sans-serif !important;
   border-radius: 1.5rem;
+  z-index: 0;
 }
 
 .custom-leaflet-pin {

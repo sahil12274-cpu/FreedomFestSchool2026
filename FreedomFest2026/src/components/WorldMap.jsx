@@ -123,10 +123,10 @@ export default function WorldMap({ globalNodes, onSelectNode, activeNodeId, acti
   ];
 
   return (
-    <div className="relative w-full h-[660px] bg-[#FDFBF7] rounded-3xl overflow-hidden border-3 border-[#FF9933]/50 shadow-2xl">
+    <div className="relative z-0 w-full h-[660px] bg-[#FDFBF7] rounded-3xl overflow-hidden border-3 border-[#FF9933]/50 shadow-2xl">
 
       {/* Map Header Banner */}
-      <div className="absolute top-4 left-4 z-[1000] flex items-center space-x-3 bg-stone-900/90 text-white backdrop-blur-md px-4 py-2.5 rounded-2xl border border-stone-700 shadow-xl">
+      <div className="absolute top-4 left-4 z-20 flex items-center space-x-3 bg-stone-900/90 text-white backdrop-blur-md px-4 py-2.5 rounded-2xl border border-stone-700 shadow-xl">
         {isBombayZoomed && (
           <button
             onClick={resetMapZoom}
@@ -145,7 +145,7 @@ export default function WorldMap({ globalNodes, onSelectNode, activeNodeId, acti
       </div>
 
       {/* Map Controls */}
-      <div className="absolute top-4 right-4 z-[1000] flex flex-col space-y-2 bg-stone-900/90 backdrop-blur-md p-1.5 rounded-2xl border border-stone-700 shadow-xl">
+      <div className="absolute top-4 right-4 z-20 flex flex-col space-y-2 bg-stone-900/90 backdrop-blur-md p-1.5 rounded-2xl border border-stone-700 shadow-xl">
         <button
           onClick={() => setMapZoom(prev => Math.min(prev + 1, 18))}
           className="p-2 rounded-xl text-white hover:bg-stone-800 transition-all cursor-pointer"
@@ -175,7 +175,7 @@ export default function WorldMap({ globalNodes, onSelectNode, activeNodeId, acti
         zoom={mapZoom}
         scrollWheelZoom={true}
         zoomControl={false}
-        className="w-full h-full"
+        className="w-full h-full z-0"
       >
         <MapController center={mapCenter} zoom={mapZoom} />
 
@@ -232,7 +232,7 @@ export default function WorldMap({ globalNodes, onSelectNode, activeNodeId, acti
       </MapContainer>
 
       {/* Bottom Status Banner */}
-      <div className="absolute bottom-4 left-4 right-4 z-[1000] bg-stone-900/90 text-white backdrop-blur-md border border-stone-700 px-5 py-3 rounded-2xl shadow-2xl flex items-center justify-between">
+      <div className="absolute bottom-4 left-4 right-4 z-20 bg-stone-900/90 text-white backdrop-blur-md border border-stone-700 px-5 py-3 rounded-2xl shadow-2xl flex items-center justify-between">
         <div className="flex items-center space-x-2">
           <Info className="w-5 h-5 text-[#FF9933]" />
           <p className="text-xs text-stone-200 font-medium">
