@@ -1,16 +1,24 @@
-# React + Vite
+# Freedom Fest 2026 • Madam Bhikaji Cama Digital Museum Kiosk
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+An interactive, high-performance digital museum kiosk web application celebrating Madam Bhikaji Cama and the 1907 Vande Mataram Flag.
 
-Currently, two official plugins are available:
+## 🚀 Quick Start (Local Development)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+```bash
+# 1. Install dependencies
+npm install
 
-## React Compiler
+# 2. Start dev server
+npm run dev
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+# 3. Build for production
+npm run build
+```
 
-## Expanding the Oxlint configuration
+## ☁️ Running in GitHub Codespaces
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+This repository includes a `.devcontainer` configuration for **GitHub Codespaces**.
+
+1. Push or transfer this folder to your GitHub repository.
+2. Click **Code** -> **Codespaces** -> **Create codespace on main**.
+3. GitHub Codespaces will automatically configure Node.js, run `npm install`, and launch/forward the dev server on port `5173`.

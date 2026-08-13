@@ -13,16 +13,16 @@
   "globalNodes": [
     {
       "id": "navsari",
-      "name": "Navsari",
-      "country": "India",
-      "lat": 20.9474,
-      "lng": 72.9312,
-      "era": "1861",
-      "summary": "Born in Navsari, Gujarat, into a wealthy Parsi family, Bhikaji Cama grew up with strong values of learning, dignity, and service before becoming an international revolutionary voice.",
+      "name": "Navsari (Birthplace)",
+      "country": "India (Gujarat)",
+      "lat": 20.9467,
+      "lng": 72.9520,
+      "era": "September 24, 1861",
+      "summary": "Birthplace of Madam Bhikaji Cama, born Bhikaiji Sorab Patel on September 24, 1861 into a prominent Parsi Zoroastrian family in Navsari, Gujarat.",
       "hasSubMap": false,
-      "fullWriteup": "Madam Bhikaji Cama was born Bhikaji Sorabji Patel on September 24, 1861, in Navsari, Gujarat, into a wealthy and respected Parsi Zoroastrian family. Her father, Sorabji Framji Patel, was a prominent merchant, and her early years were shaped by the values of education, discipline, and public service. Although she later became most closely associated with Bombay, her roots were firmly in Navsari.",
-      "quote": "My birthplace in Gujarat gave me roots, but my life was devoted to the liberation of my motherland.",
-      "narrationText": "Madam Bhikaji Cama was born in Navsari, Gujarat, on September 24, 1861, to a wealthy Parsi family. Her early years in western India shaped her values, discipline, and deep love for the motherland.",
+      "fullWriteup": "Madam Bhikaji Cama was born in Navsari, Gujarat on September 24, 1861 into an affluent and influential Parsi Zoroastrian family. Her father, Sorabji Framji Patel, was a prominent merchant and philanthropist.",
+      "quote": "To be born on Indian soil is a sacred blessing; to dedicate one's life to her liberty is our highest duty.",
+      "narrationText": "Madam Bhikaji Cama was born on September 24, 1861 in Navsari, Gujarat, into a prominent Parsi family.",
       "animationType": "school_pupil"
     },
     {
@@ -31,48 +31,48 @@
       "country": "India",
       "lat": 18.9634,
       "lng": 72.8223,
-      "era": "1863 – 1902 • 1935 – 1936",
-      "summary": "Educated in Bombay, volunteered during the 1896 plague, and returned to this city after decades abroad to spend her final years in her beloved homeland.",
+      "era": "1870s – 1902 • 1935 – 1936",
+      "summary": "Educated at Alexandra Girls' English Institution in Bombay, engaged in civic reform, volunteered during the 1896 plague, and returned to die in her homeland in 1936.",
       "hasSubMap": true,
       "subMapTitle": "Bombay Regional Historic Sites",
       "subNodes": [
         {
           "id": "alexandra_school",
           "name": "Alexandra Girls' English Institution",
-          "year": "1863 - 1878",
-          "type": "Education & Early Life",
+          "year": "1870s - 1878",
+          "type": "Education & Early Leadership",
           "lat": 18.9325,
           "lng": 72.8335,
-          "shortDesc": "Attended the famous Alexandra Girls' English Institution (founded September 1, 1863) where Bhikaji Patel excelled in languages, history, and social leadership.",
-          "fullWriteup": "The Alexandra Girls' English Institution was founded on September 1, 1863. Bhikaji received a modern, disciplined education at this prestigious school in Fort, Bombay, where she developed a sharp flair for languages, public debate, and social reform. She excelled academically and emerged as a natural social leader during her years there.",
+          "shortDesc": "Attended the famous Alexandra Girls' English Institution in Bombay where Bhikaji Patel excelled in languages, history, and social leadership.",
+          "fullWriteup": "Bhikaji received a modern, disciplined education at the Alexandra Girls' English Institution in Fort, Bombay, quickly demonstrating a sharp flair for languages, public debate, and social reform.",
           "quote": "Education is not merely for refined living, but an armor to serve one's country and uplift the downtrodden.",
-          "narrationText": "Bhikaji attended the Alexandra Girls' English Institution in Bombay from 1863-1878, where she cultivated a strong interest in learning, languages, and public engagement that would define her future activism.",
+          "narrationText": "Bhikaji Patel studied at the Alexandra Girls' English Institution in Bombay. Recognized for her extraordinary intellect, she developed a lifelong passion for social activism.",
           "animationType": "school_pupil"
         },
         {
           "id": "fort_reform",
           "name": "Fort District & Rustom Cama Estate",
-          "year": "August 3, 1885",
+          "year": "1885",
           "type": "Marriage & Social Activism",
           "lat": 18.9350,
           "lng": 72.8350,
-          "shortDesc": "Married pro-British lawyer Rustomji Cama on August 3, 1885, and engaged in extensive civic & women's welfare reform.",
-          "fullWriteup": "On August 3, 1885, Bhikaji married Rustomji Cama, a wealthy pro-British lawyer. Despite marital incompatibility arising from her strong anti-colonial stance, Madam Cama devoted her personal fortune and energies to social work, advocating for women's rights, healthcare, and education across Bombay.",
+          "shortDesc": "Married wealthy lawyer Rustomji Cama and engaged in extensive civic & women's welfare reform.",
+          "fullWriteup": "In August 1885, Bhikaji married Rustomji Cama, a wealthy pro-British lawyer. Despite marital incompatibility arising from her strong anti-colonial stance, Madam Cama devoted her personal fortune and energies to social work, advocating for women's rights, healthcare, and education across Bombay.",
           "quote": "My marriage is to my conscience and my motherland first.",
-          "narrationText": "On August 3, 1885, Bhikaji married lawyer Rustomji Cama. While her husband was pro-British, Madam Cama dedicated herself to philanthropic causes, women's welfare, and social reform across Bombay.",
+          "narrationText": "In 1885, Bhikaji married lawyer Rustomji Cama. While her husband was pro-British, Madam Cama dedicated herself to philanthropic causes, women's welfare, and social reform across Bombay.",
           "animationType": "london_parliament"
         },
         {
           "id": "grant_medical",
           "name": "Grant Medical College Hospital",
-          "year": "October 1896",
+          "year": "1896",
           "type": "Plague Relief & Heroic Nursing",
           "lat": 18.9620,
           "lng": 72.8310,
-          "shortDesc": "Selflessly volunteered in epidemic wards during the devastating 1896 Bubonic Plague, beginning in October.",
-          "fullWriteup": "When a catastrophic Bubonic Plague pandemic struck Bombay in October 1896, Madam Cama courageously joined relief teams at Grant Medical College Hospital, nursing sick and dying plague victims directly. She eventually contracted the fatal disease herself; although she survived, her health was severely impaired, leading doctors to advise travel to Europe for specialized medical treatment.",
+          "shortDesc": "Selflessly volunteered in epidemic wards during the devastating 1896 Bubonic Plague.",
+          "fullWriteup": "When a catastrophic Bubonic Plague pandemic struck Bombay in 1896, Madam Cama courageously joined relief teams at Grant Medical College Hospital, nursing sick and dying plague victims directly. She eventually contracted the fatal disease herself; although she survived, her health was severely impaired, leading doctors to advise travel to Europe in 1902 for specialized medical treatment.",
           "quote": "When our brothers and sisters perish in agony, how can any true child of India stand idle?",
-          "narrationText": "Beginning in October 1896 during the Bombay bubonic plague outbreak, Madam Cama personally nursed victims at Grant Medical College Hospital. Contracting the disease herself, she barely survived and later traveled to Europe to recover.",
+          "narrationText": "During the 1896 Bombay bubonic plague outbreak, Madam Cama personally nursed victims at Grant Medical College. Contracting the disease herself, she barely survived and traveled to Europe in 1902 to recover.",
           "animationType": "plague_ward"
         },
         {
@@ -91,14 +91,14 @@
         {
           "id": "parsi_hospital_return",
           "name": "Parsi General Hospital (Cumballa Hill)",
-          "year": "November 1935 - August 13, 1936",
+          "year": "1935 - 1936",
           "type": "Return from Exile & Passing",
           "lat": 18.9680,
           "lng": 72.8060,
-          "shortDesc": "Returned home in November 1935 after 33 years of exile, passing away at Parsi General Hospital on August 13, 1936.",
-          "fullWriteup": "Aged, frail, and partially paralyzed after decades of international struggle, Madam Cama was finally permitted to return to India in November 1935 after pledging to halt seditionist activities due to her deteriorating health. Accompanied by supporters, she spent her final months at Parsi General Hospital in Bombay. On August 13, 1936, at age 74, she passed away, bequeathing most of her personal estate to charities and orphanages.",
+          "shortDesc": "Returned home in 1935 after 33 years of exile, passing away at Parsi General Hospital on August 13, 1936.",
+          "fullWriteup": "Aged, frail, and partially paralyzed after decades of international struggle, Madam Cama was finally permitted to return to India in 1935. Accompanied by Sir Cowasji Jehangir, she was admitted to Sir Hurkisondas Hospital and later Parsi General Hospital in Bombay. On August 13, 1936, at age 74, she passed away, bequeathing most of her personal estate to charities and orphanages.",
           "quote": "My eyes have seen the dawn of freedom. India shall be free!",
-          "narrationText": "In November 1935, an ailing Madam Cama returned to Bombay after thirty-three years in exile. She passed away peacefully at Parsi General Hospital on August 13, 1936, leaving her fortune to charity.",
+          "narrationText": "In 1935, an ailing Madam Cama returned to Bombay after thirty-three years in exile. She passed away peacefully at Parsi General Hospital on August 13, 1936, leaving her fortune to charity.",
           "animationType": "school_pupil"
         }
       ]
@@ -124,11 +124,11 @@
       "lat": 48.7758,
       "lng": 9.1829,
       "era": "August 22, 1907",
-      "summary": "Historic co-designed and unfurling of the first version of the Indian National Flag at the International Socialist Conference, featuring green, saffron, and red horizontal bands.",
+      "summary": "Historic unfurling of the first version of the Indian National Flag at the International Socialist Conference.",
       "hasSubMap": false,
-      "fullWriteup": "On August 22, 1907, Madam Cama made history at the 7th International Socialist Conference in Stuttgart, Germany. Before over 1,000 international delegates, she delivered a powerful address condemning British colonial rule, famine, and economic exploitation in India. She then unfurled the 'Vande Mataram Flag'—a tricolor banner of green, saffron (yellow), and red horizontal bands. The flag's design was co-created with Vinayak Damodar Savarkar and Shyamji Krishna Varma. The green stripe featured 8 lotuses representing the 8 British Indian provinces; the saffron center displayed 'Vande Mataram' in Devanagari script; and the red base showed a sun and crescent moon symbolizing Hindu-Muslim unity.",
+      "fullWriteup": "On August 22, 1907, Madam Cama made history at the International Socialist Conference in Stuttgart, Germany. Before over 1,000 international delegates, she delivered a powerful address condemning British colonial rule, famine, and economic exploitation in India. She then unfurled the 'Vande Mataram Flag'—a tricolor banner of green, saffron (yellow), and red—declaring it the flag of Indian Independence.",
       "quote": "Behold, the flag of Indian Independence! It is born, it is consecrated by the blood of Indian youth. I call upon all lovers of freedom around the world to stand up and salute this flag!",
-      "narrationText": "On August 22, 1907 in Stuttgart, Germany, Madam Bhikaji Cama, alongside co-designers Savarkar and Shyamji Krishna Varma, historically unfurled the first version of India's National Flag before over one thousand delegates at the International Socialist Conference.",
+      "narrationText": "On August 22, 1907 in Stuttgart, Germany, Madam Bhikaji Cama unfurled the first version of India's National Flag before over one thousand delegates at the International Socialist Conference.",
       "animationType": "flag_unfurling"
     },
     {
@@ -191,34 +191,27 @@
   "flagInfo": {
     "title": "The Historic 1907 Vande Mataram Flag",
     "designedBy": "Bhikaiji Cama, Vinayak Damodar Savarkar & Shyamji Krishna Varma",
-    "unfurledLocation": "Stuttgart, Germany",
-    "unfurledDate": "August 22, 1907",
-    "unfurledContext": "Historically co-designed and unfurled at the 7th International Socialist Conference in Stuttgart before over 1,000 international delegates",
-    "designElements": "The flag featured green, saffron (yellow), and red horizontal bands",
+    "unfurledLocation": "Stuttgart, Germany (August 22, 1907)",
     "stripes": [
       {
         "color": "Green",
         "hex": "#008000",
-        "position": "Top",
         "symbol": "8 Blooming Lotuses",
-        "meaning": "Featured 8 lotuses representing the 8 British Indian provinces at the time of 1907. The lotus is a sacred symbol in Indian culture, representing purity and resilience."
+        "meaning": "Represented the eight administrative provinces of British India united in freedom."
       },
       {
         "color": "Saffron / Yellow",
         "hex": "#FF9933",
-        "position": "Middle",
-        "symbol": "Devanagari Inscription 'वन्दे मातरम्' (Vande Mataram)",
-        "meaning": "Inscribed with the sacred anthem 'Vande Mataram' (I bow to thee, Motherland) in Devanagari script, representing India's spiritual call for freedom and sovereignty."
+        "symbol": "Devanagari Inscription 'वन्दे मातरम्'",
+        "meaning": "The sacred anthem 'Vande Mataram' (I bow to thee, Motherland), inscribed across the central band."
       },
       {
         "color": "Red",
         "hex": "#D32F2F",
-        "position": "Bottom",
         "symbol": "Sun (Left) & Crescent Moon with Star (Right)",
-        "meaning": "Showed a crescent moon and a sun to symbolize unity between Islam and Hinduism, representing religious harmony and the inclusive nature of the independence movement."
+        "meaning": "The Sun and Crescent Moon represented Hindu and Muslim unity across the nation."
       }
-    ],
-    "historicalSignificance": "This was the first version of the Indian national flag to be hoisted on international soil. It serves as a precursor to India's current tricolour flag adopted after independence in 1947."
+    ]
   },
   "quizQuestions": [
     {

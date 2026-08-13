@@ -15,22 +15,26 @@ function MapController({ center, zoom }) {
   return null;
 }
 
-// Custom Leaflet Pin Generator
+// HIGH VISIBILITY Custom Leaflet Pin Generator
 const createCustomPin = (label, isActive, isBombay, era) => {
   return L.divIcon({
     className: 'custom-leaflet-pin',
     html: `
       <div class="relative flex flex-col items-center group cursor-pointer">
+        <!-- Glowing Pulse Effect -->
         <div class="absolute -inset-2 rounded-full bg-[#1E40AF]/40 blur-md animate-pulse"></div>
 
+        <!-- High-Visibility Marker Circle -->
         <div class="relative flex items-center justify-center w-14 h-14 rounded-full shadow-2xl transition-all duration-300 ${isActive
         ? 'bg-[#2563EB] text-white ring-4 ring-white border-2 border-[#1E3A8A] scale-110 shadow-blue-500/80'
         : 'bg-[#1D4ED8] text-white border-2 border-white hover:bg-[#2563EB] hover:scale-110 shadow-blue-900/80'
       }">
+          <!-- Pin Map Icon -->
           <svg class="w-7 h-7 text-white drop-shadow" fill="currentColor" viewBox="0 0 24 24">
             <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
           </svg>
 
+          <!-- Sub-Map Badge -->
           ${isBombay ? `
             <span class="absolute -top-3 -right-3 bg-[#138808] text-white text-[10px] font-black px-2 py-0.5 rounded-full shadow-lg border-2 border-white tracking-wider flex items-center gap-0.5">
               Sub-Map
@@ -38,6 +42,7 @@ const createCustomPin = (label, isActive, isBombay, era) => {
           ` : ''}
         </div>
 
+        <!-- Prominent High-Contrast Label -->
         <div class="whitespace-nowrap bg-stone-900 text-white border-2 border-[#3B82F6] px-3.5 py-1.5 rounded-2xl shadow-2xl mt-1 text-center font-sans tracking-tight transform group-hover:scale-105 transition-all">
           <div class="font-extrabold text-xs text-[#60A5FA] uppercase font-heading">${label}</div>
           <div class="text-[11px] font-semibold text-white mt-0.5">${era || ''}</div>
@@ -108,6 +113,7 @@ export default function WorldMap({ globalNodes, onSelectNode, activeNodeId, acti
   };
 
   const globalRouteCoords = [
+    [20.9467, 72.9520],
     [18.9634, 72.8223],
     [51.5074, -0.1278],
     [48.7758, 9.1829],
@@ -118,14 +124,14 @@ export default function WorldMap({ globalNodes, onSelectNode, activeNodeId, acti
   ];
 
   return (
-    <div className="relative z-0 w-full h-[520px] bg-[#FDFBF7] rounded-3xl overflow-hidden border-3 border-[#FF9933]/50 shadow-2xl">
+    <div className="relative flex-1 w-full h-full min-h-0 bg-[#FDFBF7] rounded-3xl overflow-hidden border-3 border-[#FF9933]/50 shadow-2xl">
 
       {/* Map Header Banner */}
-      <div className="absolute top-2 left-2 z-20 flex items-center space-x-2 bg-stone-900/90 text-white backdrop-blur-md px-3 py-1.5 rounded-xl border border-stone-700 shadow-xl">
+      <div className="absolute top-4 left-4 z-[1000] flex items-center space-x-3 bg-stone-900/90 text-white backdrop-blur-md px-4 py-2.5 rounded-2xl border border-stone-700 shadow-xl">
         {isBombayZoomed && (
           <button
             onClick={resetMapZoom}
-            className="flex items-center space-x-1 px-2 py-0.5 bg-[#FF9933] text-white rounded-lg text-xs font-bold hover:bg-[#D97706] transition-all shadow-md mr-0.5 cursor-pointer"
+            className="flex items-center space-x-1 px-3 py-1 bg-[#FF9933] text-white rounded-xl text-xs font-bold hover:bg-[#D97706] transition-all shadow-md mr-1 cursor-pointer"
           >
             <ArrowLeft className="w-3.5 h-3.5" />
             <span>Back to Global Map</span>
@@ -134,13 +140,13 @@ export default function WorldMap({ globalNodes, onSelectNode, activeNodeId, acti
         <div className="flex items-center space-x-2">
           <Navigation className="w-5 h-5 text-[#FF9933] animate-pulse" />
           <span className="text-xs font-extrabold uppercase tracking-wider text-white">
-            {isBombayZoomed ? "Bombay Regional Sub-Map" : "Geographic Story Map"}
+            {isBombayZoomed ? "Bombay Regional Sub-Map" : "Geographic Story Map (High-Visibility Nodes)"}
           </span>
         </div>
       </div>
 
       {/* Map Controls */}
-      <div className="absolute top-2 right-2 z-20 flex flex-col space-y-1 bg-stone-900/90 backdrop-blur-md p-1 rounded-xl border border-stone-700 shadow-xl">
+      <div className="absolute top-4 right-4 z-[1000] flex flex-col space-y-2 bg-stone-900/90 backdrop-blur-md p-1.5 rounded-2xl border border-stone-700 shadow-xl">
         <button
           onClick={() => setMapZoom(prev => Math.min(prev + 1, 18))}
           className="p-2 rounded-xl text-white hover:bg-stone-800 transition-all cursor-pointer"
@@ -170,7 +176,7 @@ export default function WorldMap({ globalNodes, onSelectNode, activeNodeId, acti
         zoom={mapZoom}
         scrollWheelZoom={true}
         zoomControl={false}
-        className="w-full h-full z-0"
+        className="w-full h-full"
       >
         <MapController center={mapCenter} zoom={mapZoom} />
 
@@ -225,6 +231,18 @@ export default function WorldMap({ globalNodes, onSelectNode, activeNodeId, acti
         })}
 
       </MapContainer>
+
+      {/* Bottom Status Banner */}
+      <div className="absolute bottom-4 left-4 right-4 z-[1000] bg-stone-900/90 text-white backdrop-blur-md border border-stone-700 px-5 py-3 rounded-2xl shadow-2xl flex items-center justify-between">
+        <div className="flex items-center space-x-2">
+          <Info className="w-5 h-5 text-[#FF9933]" />
+          <p className="text-xs text-stone-200 font-medium">
+            {isBombayZoomed
+              ? "Touch any historic site marker in Bombay to view full-screen event details."
+              : "Touch 'Bombay' to zoom into sub-map, or touch any prominent pin to view full-screen location details."}
+          </p>
+        </div>
+      </div>
 
     </div>
   );

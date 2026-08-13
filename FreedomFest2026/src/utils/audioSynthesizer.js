@@ -12,26 +12,6 @@ function getAudioContext() {
   return audioCtx;
 }
 
-function pickBestVoice() {
-  if (!('speechSynthesis' in window)) return null;
-
-  const voices = window.speechSynthesis.getVoices();
-  if (!voices.length) return null;
-
-  const preferredPatterns = [
-    /microsoft aria|microsoft jenny|google.*(female|uk english|us english)|samantha|victoria|daniel|alex/i,
-    /en-us|en-gb|en-in/i,
-    /english/i,
-  ];
-
-  for (const pattern of preferredPatterns) {
-    const match = voices.find(voice => pattern.test(voice.name) || pattern.test(voice.lang));
-    if (match) return match;
-  }
-
-  return voices.find(voice => /en/i.test(voice.lang)) || voices[0];
-}
-
 export function playSoundEffect(type) {
   try {
     const ctx = getAudioContext();
@@ -85,8 +65,68 @@ export function playSoundEffect(type) {
   }
 }
 
-// Web Speech API Voiceover Engine
+// Web Speech API Voiceover Engine - Single Voice Lock
 let currentUtterance = null;
+let selectedSingleFemaleVoice = null;
+
+// Helper to select and lock a single high-quality female voice
+function getBestFemaleVoice() {
+  if (selectedSingleFemaleVoice) return selectedSingleFemaleVoice;
+  if (!('speechSynthesis' in window)) return null;
+
+  const voices = window.speechSynthesis.getVoices();
+  if (!voices || voices.length === 0) return null;
+
+  const englishVoices = voices.filter(v => v.lang && v.lang.toLowerCase().startsWith('en'));
+  const candidatePool = englishVoices.length > 0 ? englishVoices : voices;
+
+  const femaleKeywords = ['female', 'zira', 'heera', 'samantha', 'veena', 'victoria', 'karen', 'fiona', 'hazel', 'moira', 'susan', 'ava', 'aria', 'jenny'];
+  const qualityKeywords = ['natural', 'neural', 'google', 'premium', 'enhanced', 'online'];
+
+  // Priority 1: High Quality + Female
+  let chosen = candidatePool.find(v => {
+    const nameLower = v.name.toLowerCase();
+    const isFemale = femaleKeywords.some(kw => nameLower.includes(kw));
+    const isQuality = qualityKeywords.some(kw => nameLower.includes(kw));
+    return isFemale && isQuality;
+  });
+
+  // Priority 2: Standard Female Voice
+  if (!chosen) {
+    chosen = candidatePool.find(v => {
+      const nameLower = v.name.toLowerCase();
+      return femaleKeywords.some(kw => nameLower.includes(kw));
+    });
+  }
+
+  // Priority 3: Google UK or US English Female explicit check
+  if (!chosen) {
+    chosen = candidatePool.find(v => v.name.includes('Google UK English Female') || v.name.includes('Google US English Female'));
+  }
+
+  // Priority 4: High Quality English voice fallback
+  if (!chosen) {
+    chosen = candidatePool.find(v => qualityKeywords.some(kw => v.name.toLowerCase().includes(kw)));
+  }
+
+  // Priority 5: Indian or British English voice
+  if (!chosen) {
+    chosen = candidatePool.find(v => v.lang.includes('en-IN') || v.lang.includes('en-GB')) || candidatePool[0];
+  }
+
+  if (chosen) {
+    selectedSingleFemaleVoice = chosen;
+  }
+  return chosen;
+}
+
+if (typeof window !== 'undefined' && 'speechSynthesis' in window) {
+  window.speechSynthesis.onvoiceschanged = () => {
+    if (!selectedSingleFemaleVoice) {
+      getBestFemaleVoice();
+    }
+  };
+}
 
 export function speakNarration(text, onEnd, onBoundary) {
   stopSpeech();
@@ -97,34 +137,50 @@ export function speakNarration(text, onEnd, onBoundary) {
     return;
   }
 
-  const utterance = new SpeechSynthesisUtterance(text);
-  utterance.rate = 0.9;
-  utterance.pitch = 1.1;
-  utterance.volume = 1;
+  // Small delay after stopSpeech/cancel to prevent Chrome immediate cancellation error
+  setTimeout(() => {
+    try {
+      const utterance = new SpeechSynthesisUtterance(text);
+      utterance.rate = 0.90; // Slower, calm, crystal-clear museum narration pace
+      utterance.pitch = 1.15; // Natural female pitch
 
-  const preferredVoice = pickBestVoice();
-  if (preferredVoice) {
-    utterance.voice = preferredVoice;
-    utterance.lang = preferredVoice.lang;
-  }
+      const femaleVoice = getBestFemaleVoice();
+      if (femaleVoice) {
+        utterance.voice = femaleVoice;
+      }
 
-  utterance.onend = () => {
-    currentUtterance = null;
-    if (onEnd) onEnd();
-  };
+      let endCalled = false;
+      const safeOnEnd = () => {
+        if (!endCalled) {
+          endCalled = true;
+          currentUtterance = null;
+          if (onEnd) onEnd();
+        }
+      };
 
-  utterance.onerror = (err) => {
-    console.warn('Speech error:', err);
-    currentUtterance = null;
-    if (onEnd) onEnd();
-  };
+      utterance.onend = safeOnEnd;
 
-  if (onBoundary) {
-    utterance.onboundary = onBoundary;
-  }
+      utterance.onerror = (err) => {
+        currentUtterance = null;
+        // Do not trigger onEnd if speech was explicitly canceled/interrupted
+        if (err && (err.error === 'canceled' || err.error === 'interrupted')) {
+          return;
+        }
+        console.warn('Speech error:', err);
+        safeOnEnd();
+      };
 
-  currentUtterance = utterance;
-  window.speechSynthesis.speak(utterance);
+      if (onBoundary) {
+        utterance.onboundary = onBoundary;
+      }
+
+      currentUtterance = utterance;
+      window.speechSynthesis.speak(utterance);
+    } catch (e) {
+      console.warn('Speak error:', e);
+      if (onEnd) onEnd();
+    }
+  }, 60);
 }
 
 export function pauseSpeech() {
@@ -141,7 +197,17 @@ export function resumeSpeech() {
 
 export function stopSpeech() {
   if ('speechSynthesis' in window) {
-    window.speechSynthesis.cancel();
+    try {
+      window.speechSynthesis.cancel();
+      // Ensure speech synthesis cancels queued utterances in Chrome/Windows
+      setTimeout(() => {
+        if ('speechSynthesis' in window && window.speechSynthesis.speaking) {
+          window.speechSynthesis.cancel();
+        }
+      }, 30);
+    } catch (e) {
+      console.warn('Speech cancellation error:', e);
+    }
     currentUtterance = null;
   }
 }

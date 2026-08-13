@@ -21,18 +21,7 @@
     font-family: 'Inter', system-ui, -apple-system, sans-serif;
     user-select: none;
     -webkit-user-select: none;
-    overflow: hidden;
-    scrollbar-width: none;
-    -ms-overflow-style: none;
-  }
-
-  body::-webkit-scrollbar {
-    display: none;
-  }
-
-  #root {
-    min-height: 100vh;
-    overflow: hidden;
+    overflow-x: hidden;
   }
 
   h1, h2, h3, h4, h5, h6, .font-heading {
@@ -92,7 +81,6 @@
   background-color: #FDFBF7 !important;
   font-family: 'Inter', sans-serif !important;
   border-radius: 1.5rem;
-  z-index: 0;
 }
 
 .custom-leaflet-pin {
