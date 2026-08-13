@@ -12,6 +12,26 @@ function getAudioContext() {
   return audioCtx;
 }
 
+function pickBestVoice() {
+  if (!('speechSynthesis' in window)) return null;
+
+  const voices = window.speechSynthesis.getVoices();
+  if (!voices.length) return null;
+
+  const preferredPatterns = [
+    /microsoft aria|microsoft jenny|google.*(female|uk english|us english)|samantha|victoria|daniel|alex/i,
+    /en-us|en-gb|en-in/i,
+    /english/i,
+  ];
+
+  for (const pattern of preferredPatterns) {
+    const match = voices.find(voice => pattern.test(voice.name) || pattern.test(voice.lang));
+    if (match) return match;
+  }
+
+  return voices.find(voice => /en/i.test(voice.lang)) || voices[0];
+}
+
 export function playSoundEffect(type) {
   try {
     const ctx = getAudioContext();
@@ -78,14 +98,14 @@ export function speakNarration(text, onEnd, onBoundary) {
   }
 
   const utterance = new SpeechSynthesisUtterance(text);
-  utterance.rate = 0.95; // Slightly measured for museum clarity
-  utterance.pitch = 1.0;
-  
-  // Try to pick an English voice
-  const voices = window.speechSynthesis.getVoices();
-  const englishVoice = voices.find(v => v.lang.includes('en-IN') || v.lang.includes('en-GB') || v.lang.includes('en-US'));
-  if (englishVoice) {
-    utterance.voice = englishVoice;
+  utterance.rate = 0.9;
+  utterance.pitch = 1.1;
+  utterance.volume = 1;
+
+  const preferredVoice = pickBestVoice();
+  if (preferredVoice) {
+    utterance.voice = preferredVoice;
+    utterance.lang = preferredVoice.lang;
   }
 
   utterance.onend = () => {

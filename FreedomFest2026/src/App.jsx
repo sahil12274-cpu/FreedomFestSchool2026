@@ -1,11 +1,12 @@
-import React, { useState } from 'react';
+import React, { useState, lazy, Suspense } from 'react';
 import Header from './components/Header';
-import WorldMap from './components/WorldMap';
-import EventDrawer from './components/EventDrawer';
-import FlagGallery from './components/FlagGallery';
-import QuizModule from './components/QuizModule';
-import AttractMode from './components/AttractMode';
 import milestonesData from './data/milestones.json';
+
+const WorldMap = lazy(() => import('./components/WorldMap'));
+const EventDrawer = lazy(() => import('./components/EventDrawer'));
+const FlagGallery = lazy(() => import('./components/FlagGallery'));
+const QuizModule = lazy(() => import('./components/QuizModule'));
+const AttractMode = lazy(() => import('./components/AttractMode'));
 
 export default function App() {
   const [activeTab, setActiveTab] = useState('map');
@@ -65,7 +66,7 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen bg-[#FDFBF7] text-stone-900 flex flex-col font-sans relative select-none">
+    <div className="h-screen bg-[#FDFBF7] text-stone-900 flex flex-col font-sans relative select-none overflow-hidden">
       
       {/* Kiosk Navigation Header */}
       <Header
@@ -75,54 +76,53 @@ export default function App() {
       />
 
       {/* Main Kiosk Content Body */}
-      <main className="flex-1 max-w-7xl w-full mx-auto p-4 sm:p-6 lg:p-8">
-        
-        {activeTab === 'map' && (
-          <WorldMap
-            globalNodes={globalNodes}
-            onSelectNode={handleSelectNode}
-            activeNodeId={activeNode?.id}
-            activeSubNodeId={activeSubNode?.id}
-          />
-        )}
+      <main className="flex-1 max-w-7xl w-full mx-auto p-2 sm:p-2 lg:p-3 overflow-y-auto overflow-x-hidden" style={{ scrollbarWidth: 'thin', msOverflowStyle: 'auto' }}>
+        <Suspense fallback={<div className="flex h-[520px] items-center justify-center rounded-3xl border border-stone-200 bg-stone-50 text-sm font-semibold text-stone-600">Loading exhibit...</div>}>
+          {activeTab === 'map' && (
+            <WorldMap
+              globalNodes={globalNodes}
+              onSelectNode={handleSelectNode}
+              activeNodeId={activeNode?.id}
+              activeSubNodeId={activeSubNode?.id}
+            />
+          )}
 
-        {activeTab === 'flag' && (
-          <FlagGallery flagInfo={flagInfo} />
-        )}
+          {activeTab === 'flag' && (
+            <FlagGallery flagInfo={flagInfo} />
+          )}
 
-        {activeTab === 'quiz' && (
-          <QuizModule quizQuestions={quizQuestions} />
-        )}
-
+          {activeTab === 'quiz' && (
+            <QuizModule quizQuestions={quizQuestions} />
+          )}
+        </Suspense>
       </main>
 
       {/* Split-Screen Event Kiosk Drawer */}
       {isDrawerOpen && (
-        <EventDrawer
-          activeNode={activeNode}
-          activeSubNode={activeSubNode}
-          onClose={handleCloseDrawer}
-          onNavigateNext={handleNavigateNext}
-          onNavigatePrev={handleNavigatePrev}
-        />
+        <Suspense fallback={null}>
+          <EventDrawer
+            activeNode={activeNode}
+            activeSubNode={activeSubNode}
+            onClose={handleCloseDrawer}
+            onNavigateNext={handleNavigateNext}
+            onNavigatePrev={handleNavigatePrev}
+          />
+        </Suspense>
       )}
 
       {/* Attract Mode Overlay */}
       {isAttractMode && (
-        <AttractMode
-          globalNodes={globalNodes}
-          onExitAttractMode={() => setIsAttractMode(false)}
-          onSelectNodeFromAttract={(node) => {
-            setActiveTab('map');
-            handleSelectNode(node, node.subNodes ? node.subNodes[0] : null);
-          }}
-        />
+        <Suspense fallback={null}>
+          <AttractMode
+            globalNodes={globalNodes}
+            onExitAttractMode={() => setIsAttractMode(false)}
+            onSelectNodeFromAttract={(node) => {
+              setActiveTab('map');
+              handleSelectNode(node, node.subNodes ? node.subNodes[0] : null);
+            }}
+          />
+        </Suspense>
       )}
-
-      {/* Kiosk Footer */}
-      <footer className="py-4 text-center text-xs text-stone-500 border-t border-stone-200 mt-auto">
-        Madam Bhikaji Cama Digital Museum Kiosk • Freedom Fest 2026 • Dedicated to Indian Independence Pioneers
-      </footer>
 
     </div>
   );

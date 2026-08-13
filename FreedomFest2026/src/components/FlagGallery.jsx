@@ -16,7 +16,7 @@ export default function FlagGallery({ flagInfo }) {
   };
 
   return (
-    <div className="max-w-6xl mx-auto space-y-8 py-4 px-4 sm:px-6">
+    <div className="max-w-6xl mx-auto space-y-4 py-2 px-4 sm:px-6 overflow-y-auto h-full flex flex-col min-h-0 pb-[10px]">
       
       {/* Hero Header */}
       <div className="text-center space-y-3">
@@ -137,7 +137,7 @@ export default function FlagGallery({ flagInfo }) {
       </div>
 
       {/* Historic Context Banner */}
-      <div className="parchment-card p-6 sm:p-8 rounded-3xl border border-[#FF9933]/30 shadow-lg space-y-4">
+      <div className="parchment-card p-6 sm:p-8 rounded-3xl border border-[#FF9933]/30 shadow-lg space-y-4 mb-8">
         <div className="flex items-center space-x-3 text-[#000080]">
           <ShieldCheck className="w-6 h-6 text-[#FF9933]" />
           <h4 className="font-heading text-lg font-bold">Historical Legacy & Consecration</h4>

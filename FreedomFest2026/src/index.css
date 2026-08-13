@@ -21,7 +21,18 @@
     font-family: 'Inter', system-ui, -apple-system, sans-serif;
     user-select: none;
     -webkit-user-select: none;
-    overflow-x: hidden;
+    overflow: hidden;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+  body::-webkit-scrollbar {
+    display: none;
+  }
+
+  #root {
+    min-height: 100vh;
+    overflow: hidden;
   }
 
   h1, h2, h3, h4, h5, h6, .font-heading {

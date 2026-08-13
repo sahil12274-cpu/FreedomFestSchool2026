@@ -8,4 +8,18 @@ export default defineConfig({
     react(),
     tailwindcss()
   ],
+  build: {
+    chunkSizeWarningLimit: 700,
+    rollupOptions: {
+      output: {
+        manualChunks(id) {
+          if (id.includes('node_modules')) {
+            if (id.includes('leaflet') || id.includes('react-leaflet')) return 'leaflet';
+            if (id.includes('framer-motion')) return 'motion';
+            if (id.includes('lucide-react')) return 'ui';
+          }
+        }
+      }
+    }
+  }
 })
