@@ -22,3 +22,4 @@ This repository includes a `.devcontainer` configuration for **GitHub Codespaces
 1. Push or transfer this folder to your GitHub repository.
 2. Click **Code** -> **Codespaces** -> **Create codespace on main**.
 3. GitHub Codespaces will automatically configure Node.js, run `npm install`, and launch/forward the dev server on port `5173`.
+Fixed download issue.
